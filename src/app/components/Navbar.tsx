@@ -4,10 +4,10 @@ import { AiFillLinkedin } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
-import { Button } from "@heroui/button";
+
 import { Kranky, Titan_One } from "next/font/google";
-import { useScroll } from "framer-motion";
-import { mapPropsVariants } from "@heroui/system";
+
+
 const titanOne = Titan_One({
   weight: ["400"],
   subsets: ["latin-ext"],

@@ -4,11 +4,11 @@ import Image from "next/image";
 
 import { CgWebsite } from "react-icons/cg";
 import { FaReact } from "react-icons/fa6";
-import { Button } from "@heroui/button";
+
 import { IoApps } from "react-icons/io5";
 import { TbBrandReactNative } from "react-icons/tb";
 import { Avatar } from "@heroui/react";
-import { Kranky, Titan_One, Poppins, Bangers } from "next/font/google";
+import { Kranky, Titan_One, Poppins } from "next/font/google";
 const kranky = Kranky({
   weight: ["400"],
   subsets: ["latin"],

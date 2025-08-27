@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Chip } from "@heroui/chip";
-import { Kranky, Poppins, Titan_One } from "next/font/google";
+import { Kranky, Poppins } from "next/font/google";
 const skills = [
   "HTML",
   "CSS",

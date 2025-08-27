@@ -1,19 +1,12 @@
 "use client";
 import React from "react";
 import { Form, Input, Button } from "@heroui/react";
-import { Kranky, Poppins, Staatliches, Titan_One } from "next/font/google";
+import { Kranky, Poppins } from "next/font/google";
 const kranky = Kranky({
   weight: ["400"],
   subsets: ["latin"],
 });
-const titanOne = Titan_One({
-  weight: ["400"],
-  subsets: ["latin-ext"],
-});
-const staatliches = Staatliches({
-  weight: "400",
-  subsets: ["latin"],
-});
+
 const poppins = Poppins({
   weight: "400",
   subsets: ["latin"],
@@ -22,7 +15,7 @@ import { motion } from "motion/react";
 const Contact = () => {
   const [action, setAction] = React.useState(null);
   const phone = "8638232686";
-  function sendMessageOnWhatsApp(name, email, message) {
+  function sendMessageOnWhatsApp(name: string, email: string, message: string) {
     const fullMessage = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
     const encodedMessage = encodeURIComponent(fullMessage);
     const url = `https://wa.me/${phone}?text=${encodedMessage}`;

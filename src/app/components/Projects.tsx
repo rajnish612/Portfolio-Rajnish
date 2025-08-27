@@ -10,6 +10,8 @@ const projects = [
     description:
       "This is a full-stack MERN application that connects job seekers with recruiters. Job seekers can register, create detailed profiles with their skills and experience, and upload projects with GitHub or demo links to showcase their professional portfolio. Recruiters can browse developers, filter candidates by location, skills, and experience, and contact them directly via email or social links. The application supports pagination for large datasets and is built with React.js and Tailwind CSS on the frontend, Node.js and Express.js on the backend, MongoDB with Mongoose for the database, and JWT for authentication.",
     image: "/images/jobConnect.png",
+    github: "https://github.com/rajnish612/JobConnect",
+    live: "https://job-connect-liard.vercel.app/",
   },
   {
     title: "Chatting App",

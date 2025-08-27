@@ -13,7 +13,6 @@ const poppins = Poppins({
 });
 import { motion } from "motion/react";
 const Contact = () => {
-  const [action, setAction] = React.useState(null);
   const phone = "8638232686";
   function sendMessageOnWhatsApp(name: string, email: string, message: string) {
     const fullMessage = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
@@ -55,7 +54,7 @@ const Contact = () => {
 
       <Form
         className="w-full max-w-lg shadow-blue-200 space-y-4 justify-center flex bg-gradient-to-tr shadow-lg  backdrop-blur-2xl from-indigo-100/40 to-red-100/40 p-4 rounded-lg flex-col gap-4"
-        onReset={() => setAction("reset")}
+      
         onSubmit={(e) => {
           e.preventDefault();
           const data = Object.fromEntries(new FormData(e.currentTarget));

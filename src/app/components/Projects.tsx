@@ -18,18 +18,23 @@ const projects = [
     description:
       "I am building a full-featured chat web application from scratch that includes real-time messaging, user authentication, and voice/video calling. The app uses React.js with Tailwind CSS for a polished frontend, Node.js with GraphQL for backend functionality, MongoDB for data management, Socket.io for real-time interactions, and WebRTC for voice and video capabilities. Current efforts are focused on integrating video calling, enhancing the UI with responsive design, and optimizing overall performance for a faster and more engaging user experience.",
     image: "/images/Chatting website.png",
+    github: "https://github.com/rajnish612/chatting-app",
   },
   {
     title: "TechAgency landing page",
     description:
       "I am building a full-featured chat web application from scratch that includes real-time messaging, user authentication, and voice/video calling. The app uses React.js with Tailwind CSS for a polished frontend, Node.js with GraphQL for backend functionality, MongoDB for data management, Socket.io for real-time interactions, and WebRTC for voice and video capabilities. Current efforts are focused on integrating video calling, enhancing the UI with responsive design, and optimizing overall performance for a faster and more engaging user experience.",
     image: "/images/techAgency.png",
+    github: "https://github.com/rajnish612/TechAgency",
+    live: "https://tech-agency-nylr.vercel.app/",
   },
   {
     title: "Digital Marketing Agency landing page",
     description:
       "This project is a sleek, responsive landing page for a digital marketing agency, built end-to-end with the MERN stack. It features a React frontend with dynamic service sections, an interactive testimonial carousel, and a sticky navigation bar. The design is fully responsive, providing an optimal viewing experience across desktop, tablet, and mobile devices.",
     image: "/images/digitalMarketingAgency.png",
+    github: "https://github.com/rajnish612/Digital-Marketing-Agency",
+    live: "https://digital-marketing-agency-xi.vercel.app/",
   },
 ];
 const titanOne = Titan_One({
@@ -77,12 +82,14 @@ const Projects = () => {
                 >
                   {project.title.toUpperCase()}
                 </h4>
-                <a className="ml-auto cursor-pointer">
+                <a href={project.github} className="ml-auto cursor-pointer">
                   <FaGithub size={20} />
                 </a>
-                <a className="cursor-pointer">
-                  <FiExternalLink size={20} />
-                </a>
+                {project.live && (
+                  <a href={project.live} className="cursor-pointer">
+                    <FiExternalLink size={20} />
+                  </a>
+                )}
               </CardHeader>
               <CardBody className="overflow-visible mx-auto py-2">
                 <Image

@@ -83,11 +83,11 @@ const Projects = () => {
                   {project.title.toUpperCase()}
                 </h4>
                 <a href={project.github} className="ml-auto cursor-pointer">
-                  <FaGithub size={20} />
+                  <FaGithub color="white" size={20} />
                 </a>
                 {project.live && (
                   <a href={project.live} className="cursor-pointer">
-                    <FiExternalLink size={20} />
+                    <FiExternalLink color="white" size={20} />
                   </a>
                 )}
               </CardHeader>

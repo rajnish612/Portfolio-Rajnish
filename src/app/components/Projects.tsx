@@ -72,7 +72,7 @@ const Projects = () => {
             transition={{ duration: 0.5, delay: 0.1 * idx }}
             whileInView={{ translateX: 0 }}
             key={project.title}
-            className="flex justify-center shadow-blue-100  border-2 space-y-5 border-slate-200 shadow-[0px_0px_60px_5px] p-5 bg-gradient-to-r from-indigo-100 to-pink-100  rounded-2xl items-center mt-5 space-x-5 mx-auto flex-wrap"
+            className="flex justify-center mt-10  shadow-blue-100  border-2 space-y-5 border-slate-200 shadow-[0px_0px_60px_5px] p-5 bg-gradient-to-r from-indigo-100 to-pink-100/50   rounded-2xl items-center  space-x-5 mx-auto flex-wrap"
           >
             <Card className="py-4  bg-gradient-to-r from-[#0D1B2A] to-[#0D1B2A]  ">
               <CardHeader className="pb-0 pt-2 px-4 space-x-2    flex flex-wrap items-center">

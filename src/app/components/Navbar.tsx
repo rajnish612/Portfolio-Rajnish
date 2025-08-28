@@ -7,7 +7,6 @@ import { FaBars } from "react-icons/fa";
 
 import { Kranky, Titan_One } from "next/font/google";
 
-
 const titanOne = Titan_One({
   weight: ["400"],
   subsets: ["latin-ext"],
@@ -24,7 +23,7 @@ const Navbar = () => {
       initial={{ opacity: 0 }}
       transition={{ duration: 1 }}
       animate={{ opacity: 1 }}
-      className={`w-full ${titanOne.className}  top-0 right-0 left-0   fixed z-20   text-black bg-[#0D1B2A]/90 backdrop-blur-sm flex justify-end shadow-lg p-4`}
+      className={`w-full ${titanOne.className}  top-0 right-0 left-0   fixed z-20   text-black bg-black/90 backdrop-blur-sm flex justify-end shadow-lg p-4`}
     >
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500"></div>
       <div className="flex w-full text-white space-y-4   flex-col md:hidden items-end">

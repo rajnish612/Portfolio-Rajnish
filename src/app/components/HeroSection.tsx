@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import { CgWebsite } from "react-icons/cg";
 import { FaReact } from "react-icons/fa6";
-
+import { FaCode } from "react-icons/fa";
 import { IoApps } from "react-icons/io5";
 import { TbBrandReactNative } from "react-icons/tb";
 import { Avatar } from "@heroui/react";
@@ -30,22 +30,51 @@ const HeroSection = () => {
     >
       <div className="flex mt-30  justify-center  w-full  items-center ">
         <div className=" flex  flex-wrap   w-full   gap-20 justify-center   ">
-          <motion.div
-            initial={{ opacity: 0 }}
-            transition={{ duration: 2 }}
-            whileInView={{ opacity: 1 }}
-            className="h-90 w-90 sm:h-100 sm:w-100 shadow-blue-200 border-5 bg-amber-200 border-blue-300 shadow-2xl rounded-full  overflow-hidden"
-          >
-            <Image
-              className="ring-2 ring-[#0D1B2A] w-full h-full"
-              src="/images/image.jpeg"
-              alt="Rajnish"
-              // width={200}
-              width={400}
-              height={400}
-              style={{ objectFit: "cover" }}
-            />
-          </motion.div>
+          <div className="flex space-y-4 flex-col items-center">
+            <motion.div
+              initial={{ opacity: 0 }}
+              transition={{ duration: 2 }}
+              whileInView={{ opacity: 1 }}
+              className="h-90 w-90 sm:h-100 sm:w-100 shadow-blue-200 border-5 bg-amber-200 border-blue-300 shadow-2xl rounded-full  overflow-hidden"
+            >
+              <Image
+                className="ring-2 ring-[#0D1B2A] w-full h-full"
+                src="/images/image.jpeg"
+                alt="Rajnish"
+                // width={200}
+                width={400}
+                height={400}
+                style={{ objectFit: "cover" }}
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              transition={{ duration: 2 }}
+              whileInView={{ opacity: 1 }}
+              className="flex bg-gradient-to-r from-indigo-50 to-pink-100/50 rounded-full shadow-lg shadow-indigo-200 p-2 items-center space-x-3"
+            >
+              <h1
+                style={kranky.style}
+                className="font-black text-2xl sm:text-3xl md:text-4xl text-black"
+              >
+                {`<Software Developer`}
+              </h1>
+              <Avatar
+                isBordered
+                size="sm"
+                className="w-7 h-7"
+                icon={<FaCode size={17} />}
+                color="primary"
+              />{" "}
+              <span
+                style={kranky.style}
+                className="text-2xl sm:text-3xl md:text-4xl bg-clip-text w-fit bg-gradient-to-r from-indigo-500 to-red-500 text-transparent"
+              >
+                {" "}
+                {">"}
+              </span>
+            </motion.div>
+          </div>
           <div className=" max-w-4xl  px-3 lg:max-w-xl  flex flex-col items-center">
             <div className=" flex flex-col space-y-4  text-left   ">
               <span style={titanOne.style} className="font-black  text-3xl">
@@ -79,15 +108,7 @@ const HeroSection = () => {
                   );
                 })}
               </span>
-              <motion.h1
-                initial={{ opacity: 0 }}
-                transition={{ duration: 2 }}
-                whileInView={{ opacity: 1 }}
-                style={kranky.style}
-                className="font-black text-4xl bg-gradient-to-r bg-clip-text from-[#212529] to-[#212529] text-transparent"
-              >
-                {"<Software Developer>"}
-              </motion.h1>
+
               <span
                 style={poppins.style}
                 className="text-[#1B263B]  font-light"
@@ -170,7 +191,7 @@ const HeroSection = () => {
                     .getElementById("contact")
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="bg-[#0D1B2A] p-2 rounded-lg text-[#E0E1DD]"
+                className="bg-[#0D1B2A] shadow-lg cursor-pointer hover:scale-[1.1] transition-transform shadow-indigo-400 p-2 rounded-lg text-[#E0E1DD]"
               >
                 Get in touch
               </button>
@@ -180,7 +201,7 @@ const HeroSection = () => {
                     .getElementById("projects")
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="bg-[#415A77] p-2 rounded-lg text-[#E0E1DD]"
+                className="bg-[#415A77] cursor-pointer hover:scale-[1.1] transition-transform shadow-lg shadow-indigo-400 p-2 rounded-lg text-[#E0E1DD]"
               >
                 Browse Projects
               </button>

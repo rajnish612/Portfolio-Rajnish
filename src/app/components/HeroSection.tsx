@@ -136,7 +136,7 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               transition={{ duration: 2 }}
               whileInView={{ opacity: 1 }}
-              className="flex bg-gradient-to-r from-indigo-50 to-pink-100/50 rounded-full shadow-lg shadow-indigo-200 p-2 items-center space-x-3"
+              className="flex bg-gradient-to-r px-5 from-indigo-50 to-pink-100/50 rounded-full shadow-lg shadow-indigo-200 p-2 items-center space-x-3"
             >
               <h1
                 style={poppins.style}

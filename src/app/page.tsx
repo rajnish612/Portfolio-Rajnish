@@ -9,7 +9,7 @@ import Education from "./components/Education";
 const page = () => {
   return (
     // bg-gradient-to-br from-[#778DA9] to-[#E0E1DD]
-    <div className="  flex flex-col  bg-[#E0E1DD]">
+    <div className="  flex flex-col  bg-white">
       <Navbar />
 
       <HeroSection />

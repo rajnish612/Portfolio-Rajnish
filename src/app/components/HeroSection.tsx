@@ -142,7 +142,7 @@ const HeroSection = () => {
                 style={poppins.style}
                 className="font-black text-2xl sm:text-3xl md:text-4xl bg-clip-text w-fit bg-gradient-to-r from-black  via-black/50 to-blue-500 text-transparent "
               >
-                {`<Software Developer`}
+                {`Software Developer`}
               </h1>
               <Avatar
                 isBordered
@@ -156,7 +156,7 @@ const HeroSection = () => {
                 className="text-2xl sm:text-3xl md:text-4xl bg-clip-text w-fit bg-gradient-to-r from-indigo-500 to-red-500 text-transparent"
               >
                 {" "}
-                {">"}
+                {""}
               </span>
             </motion.div>
             <motion.div

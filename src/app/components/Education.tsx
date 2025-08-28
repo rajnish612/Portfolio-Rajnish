@@ -182,7 +182,6 @@ const Education = () => {
                         St. Xavier's HS School, Duliajan
                       </span>
                     </div>
-
                     <div className="flex items-center space-x-3">
                       <div className="w-2 h-2 bg-blue-500 rounded-full" />
                       <span
@@ -190,16 +189,6 @@ const Education = () => {
                         className="text-lg text-[#0D1B2A]/80 font-medium"
                       >
                         Location: Duliajan, Assam
-                      </span>
-                    </div>
-
-                    <div className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-indigo-500 rounded-full" />
-                      <span
-                        style={poppins.style}
-                        className="text-lg text-[#0D1B2A]/80 font-medium"
-                      >
-                        Foundation in Science & Mathematics
                       </span>
                     </div>
                   </div>

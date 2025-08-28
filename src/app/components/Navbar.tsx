@@ -68,7 +68,7 @@ const Navbar = () => {
           style={kranky.style}
           className={`flex ${
             mobileNavOpen ? "h-100 transition-height" : "h-0"
-          } flex-col space-y-7 w-full text-center transition-height duration-300 overflow-hidden`}
+          } flex-col space-y-5 w-full text-center transition-height duration-300 overflow-hidden`}
         >
           <button
             onClick={() => {
@@ -116,6 +116,18 @@ const Navbar = () => {
             className=""
           >
             Education
+          </button>
+          <div className="h-[2px] w-full bg-white" />
+          <button
+            onClick={() => {
+              setMobileNavOpen(false);
+              document
+                .getElementById("certifications")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className=""
+          >
+            Certifications
           </button>
           <div className="h-[2px] w-full bg-white" />
           <button
@@ -175,6 +187,20 @@ const Navbar = () => {
             className="text-[#F8F9FA] cursor-pointer bg-transparent  group flex flex-col justify-end"
           >
             Education
+            <div className="h-1 w-0 bg-[#F8F9FA] group-hover:w-full rounded-full transition-width mr-auto" />
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={() => {
+              setMobileNavOpen(false);
+              document
+                .getElementById("certifications")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="text-[#F8F9FA] cursor-pointer bg-transparent  group flex flex-col justify-end"
+          >
+            Certifications
             <div className="h-1 w-0 bg-[#F8F9FA] group-hover:w-full rounded-full transition-width mr-auto" />
           </button>
         </li>

@@ -76,13 +76,6 @@ const Certifications = () => {
               </a>
             </div>
 
-            <div className="mb-3">
-              <div className="flex items-center gap-2 text-gray-600">
-                <Calendar className="w-4 h-4" />
-                <span className="text-sm">{cert.date}</span>
-              </div>
-            </div>
-
             <p className="text-gray-700 text-sm leading-relaxed mb-4">
               {cert.description}
             </p>

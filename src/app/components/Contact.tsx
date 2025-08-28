@@ -78,7 +78,7 @@ const Contact = () => {
             isRequired
             errorMessage="Please enter your name"
             name="name"
-            placeholder="Enter your username"
+            placeholder="Write your name"
             type="text"
           />
         </motion.div>
@@ -95,7 +95,7 @@ const Contact = () => {
             isRequired
             errorMessage="Please write a message"
             name="message"
-            placeholder="Enter your username"
+            placeholder="Write a message"
             type="text"
           />
         </motion.div>

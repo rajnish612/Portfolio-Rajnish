@@ -3,7 +3,7 @@ import React from "react";
 import { Card, CardHeader, CardBody, Image } from "@heroui/react";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
-import { Kranky, Titan_One, Viga } from "next/font/google";
+import { Poppins, Titan_One } from "next/font/google";
 const projects = [
   {
     title: "Job Connect",
@@ -38,16 +38,12 @@ const projects = [
   },
 ];
 const titanOne = Titan_One({
-  weight: ["400"],
+  weight: "400",
   subsets: ["latin-ext"],
 });
-const kranky = Kranky({
-  weight: ["400"],
-  subsets: ["latin"],
-});
-const vigo = Viga({
-  weight: "400",
-  subsets: ["latin"],
+const poppins = Poppins({
+  weight: "500",
+  subsets: ["devanagari"],
 });
 import { motion } from "motion/react";
 const Projects = () => {
@@ -57,7 +53,7 @@ const Projects = () => {
         <div className="flex items-center px-5 space-x-5">
           <div className="h-[2px] w-full bg-[#415A77]" />
           <h1
-            style={kranky.style}
+            style={titanOne.style}
             className="text-[#0D1B2A] text-center text-5xl mt-2"
           >
             Projects
@@ -77,7 +73,7 @@ const Projects = () => {
             <Card className="py-4  bg-gradient-to-r from-[#0D1B2A] to-[#0D1B2A]  ">
               <CardHeader className="pb-0 pt-2 px-4 space-x-2    flex flex-wrap items-center">
                 <h4
-                  style={kranky.style}
+                  style={titanOne.style}
                   className="font-bold text-white text-large max-w-50"
                 >
                   {project.title.toUpperCase()}
@@ -109,7 +105,7 @@ const Projects = () => {
                 {" "}
                 {project.title.toUpperCase()}
               </h1>
-              <span style={vigo.style} className="text-black  font-bold">
+              <span style={poppins.style} className="text-black  font-bold">
                 {project.description}
               </span>
             </div>

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Chip } from "@heroui/chip";
-import { Kranky, Poppins } from "next/font/google";
+import { Poppins, Titan_One } from "next/font/google";
 const skills = [
   "HTML",
   "CSS",
@@ -30,19 +30,20 @@ const skills = [
   "Machine Learning",
 ];
 
+const titanOne = Titan_One({
+  weight: "400",
+  subsets: ["latin-ext"],
+});
 const poppins = Poppins({
   weight: "500",
   subsets: ["devanagari"],
 });
-const kranky = Kranky({
-  weight: ["400"],
-  subsets: ["latin"],
-});
+
 import { motion } from "motion/react";
 const Skills = () => {
   return (
     <div
-    id="skills"
+      id="skills"
       style={poppins.style}
       className=" px-5  overflow-x-hidden mt-10 py-4 w-full flex-col   flex"
     >
@@ -50,7 +51,7 @@ const Skills = () => {
         <div className="flex items-center px-5 space-x-5">
           <div className="h-[2px] w-full bg-[#415A77]" />
           <h1
-            style={kranky.style}
+            style={titanOne.style}
             className="text-[#0D1B2A] text-center text-5xl mt-2"
           >
             Skills
@@ -62,6 +63,7 @@ const Skills = () => {
         {skills.map((skill, idx) => {
           return (
             <motion.div
+            style={poppins.style}
               initial={{ opacity: 0 }}
               transition={{ delay: 0.05 * idx }}
               whileInView={{ opacity: 1 }}

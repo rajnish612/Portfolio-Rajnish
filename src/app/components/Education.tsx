@@ -29,7 +29,7 @@ const Education = () => {
           className="text-center mb-16"
         >
           <h1
-            style={kranky.style}
+            style={staatliches.style}
             className="text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#0D1B2A] via-blue-600 to-purple-600 drop-shadow-lg mb-6"
           >
             EDUCATION

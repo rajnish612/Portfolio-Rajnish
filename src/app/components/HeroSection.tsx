@@ -8,19 +8,17 @@ import { FaCode } from "react-icons/fa";
 import { IoApps } from "react-icons/io5";
 import { TbBrandReactNative } from "react-icons/tb";
 import { Avatar } from "@heroui/react";
-import { Kranky, Titan_One, Poppins } from "next/font/google";
-const kranky = Kranky({
-  weight: ["400"],
-  subsets: ["latin"],
-});
-const titanOne = Titan_One({
-  weight: ["400"],
-  subsets: ["latin-ext"],
-});
+import { Poppins, Titan_One } from "next/font/google";
+
 const poppins = Poppins({
   weight: "500",
-  subsets: ["devanagari"],
+  subsets: ["latin"],
 });
+const poppins2 = Titan_One({
+  weight: "400",
+  subsets: ["latin-ext"],
+});
+
 import { motion } from "motion/react";
 const HeroSection = () => {
   return (
@@ -30,54 +28,9 @@ const HeroSection = () => {
     >
       <div className="flex mt-30  justify-center  w-full  items-center ">
         <div className=" flex  flex-wrap   w-full   gap-20 justify-center   ">
-          <div className="flex space-y-4 flex-col items-center">
-            <motion.div
-              initial={{ opacity: 0 }}
-              transition={{ duration: 2 }}
-              whileInView={{ opacity: 1 }}
-              className="h-90 w-90 sm:h-100 sm:w-100 shadow-blue-200 border-5 bg-amber-200 border-blue-300 shadow-2xl rounded-full  overflow-hidden"
-            >
-              <Image
-                className="ring-2 ring-[#0D1B2A] w-full h-full"
-                src="/images/image.jpeg"
-                alt="Rajnish"
-                // width={200}
-                width={400}
-                height={400}
-                style={{ objectFit: "cover" }}
-              />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              transition={{ duration: 2 }}
-              whileInView={{ opacity: 1 }}
-              className="flex bg-gradient-to-r from-indigo-50 to-pink-100/50 rounded-full shadow-lg shadow-indigo-200 p-2 items-center space-x-3"
-            >
-              <h1
-                style={kranky.style}
-                className="font-black text-2xl sm:text-3xl md:text-4xl text-black"
-              >
-                {`<Software Developer`}
-              </h1>
-              <Avatar
-                isBordered
-                size="sm"
-                className="w-7 h-7"
-                icon={<FaCode size={17} />}
-                color="primary"
-              />{" "}
-              <span
-                style={kranky.style}
-                className="text-2xl sm:text-3xl md:text-4xl bg-clip-text w-fit bg-gradient-to-r from-indigo-500 to-red-500 text-transparent"
-              >
-                {" "}
-                {">"}
-              </span>
-            </motion.div>
-          </div>
           <div className=" max-w-4xl  px-3 lg:max-w-xl  flex flex-col items-center">
             <div className=" flex flex-col space-y-4  text-left   ">
-              <span style={titanOne.style} className="font-black  text-3xl">
+              <span style={poppins2.style} className="font-black  text-3xl">
                 {"Hi, I’m".split("").map((item, idx) => {
                   return (
                     <motion.span
@@ -92,7 +45,7 @@ const HeroSection = () => {
                 })}{" "}
               </span>
               <span
-                style={titanOne.style}
+                style={poppins2.style}
                 className="font-black  text-3xl text-[#415A77]"
               >
                 {"Rajnish Nath!".split("").map((item, idx) => {
@@ -177,15 +130,60 @@ const HeroSection = () => {
                 <Avatar size="lg" isBordered color="danger" icon={<IoApps />} />
               </motion.div>
             </div>
-
+          </div>
+          <div className="flex space-y-4 flex-col items-center">
+            <motion.div
+              initial={{ opacity: 0 }}
+              transition={{ duration: 2 }}
+              whileInView={{ opacity: 1 }}
+              className="flex bg-gradient-to-r from-indigo-50 to-pink-100/50 rounded-full shadow-lg shadow-indigo-200 p-2 items-center space-x-3"
+            >
+              <h1
+                style={poppins.style}
+                className="font-black text-2xl sm:text-3xl md:text-4xl bg-clip-text w-fit bg-gradient-to-r from-black  via-black/50 to-blue-500 text-transparent "
+              >
+                {`<Software Developer`}
+              </h1>
+              <Avatar
+                isBordered
+                size="sm"
+                className="w-7 h-7"
+                icon={<FaCode size={17} />}
+                color="primary"
+              />{" "}
+              <span
+                style={poppins.style}
+                className="text-2xl sm:text-3xl md:text-4xl bg-clip-text w-fit bg-gradient-to-r from-indigo-500 to-red-500 text-transparent"
+              >
+                {" "}
+                {">"}
+              </span>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              transition={{ duration: 2 }}
+              whileInView={{ opacity: 1 }}
+              className="h-90 w-90 sm:h-100 sm:w-100 shadow-blue-300 border-3 border-slate-400 bg-amber-200  shadow-2xl rounded-full  overflow-hidden"
+            >
+              <Image
+                className="ring-2 ring-[#0D1B2A] w-full h-full"
+                src="/images/image.jpeg"
+                alt="Rajnish"
+                // width={200}
+                width={400}
+                height={400}
+                style={{ objectFit: "cover" }}
+              />
+            </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               transition={{ duration: 1, delay: 0.4 }}
               whileInView={{ opacity: 1, y: 0 }}
-              style={kranky.style}
+              style={poppins.style}
               className="flex gap-4 mt-5 flex-wrap items-center"
             >
               <button
+                style={poppins.style}
                 onClick={() => {
                   document
                     .getElementById("contact")
@@ -196,6 +194,7 @@ const HeroSection = () => {
                 Get in touch
               </button>
               <button
+                style={poppins.style}
                 onClick={() => {
                   document
                     .getElementById("projects")

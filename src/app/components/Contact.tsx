@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
 import { Form, Input, Button } from "@heroui/react";
-import { Kranky, Poppins } from "next/font/google";
-const kranky = Kranky({
+import { Poppins, Titan_One } from "next/font/google";
+const kranky = Titan_One({
   weight: ["400"],
   subsets: ["latin"],
 });
 
 const poppins = Poppins({
-  weight: "400",
+  weight: "500",
   subsets: ["latin"],
 });
 import { motion } from "motion/react";
@@ -34,7 +34,7 @@ const Contact = () => {
       >
         <h1
           style={kranky.style}
-          className="font-black text-5xl bg-clip-text w-fit bg-gradient-to-r from-indigo-500 to-red-500 text-transparent"
+          className="font-black text-5xl bg-clip-text w-fit bg-gradient-to-r from-black  via-black/50 to-blue-500 text-transparent"
         >
           CONTACT ME
         </h1>
@@ -54,7 +54,6 @@ const Contact = () => {
 
       <Form
         className="w-full max-w-lg shadow-blue-200 space-y-4 justify-center flex bg-gradient-to-tr shadow-lg  backdrop-blur-2xl from-indigo-100/40 to-red-100/40 p-4 rounded-lg flex-col gap-4"
-      
         onSubmit={(e) => {
           e.preventDefault();
           const data = Object.fromEntries(new FormData(e.currentTarget));

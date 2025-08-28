@@ -1,5 +1,5 @@
 import React from "react";
-import { ExternalLink, Award, Calendar } from "lucide-react";
+import { ExternalLink, Award } from "lucide-react";
 
 const Certifications = () => {
   // Sample certification data - replace with your actual certifications

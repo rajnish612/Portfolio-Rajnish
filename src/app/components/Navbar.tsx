@@ -5,14 +5,10 @@ import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 
-import { Kranky, Titan_One } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const titanOne = Titan_One({
-  weight: ["400"],
-  subsets: ["latin-ext"],
-});
-const kranky = Kranky({
-  weight: ["400"],
+const poppins = Poppins({
+  weight: "800",
   subsets: ["latin"],
 });
 import { motion } from "motion/react";
@@ -23,7 +19,7 @@ const Navbar = () => {
       initial={{ opacity: 0 }}
       transition={{ duration: 1 }}
       animate={{ opacity: 1 }}
-      className={`w-full ${titanOne.className}  top-0 right-0 left-0   fixed z-20   text-black bg-black/90 backdrop-blur-sm flex justify-end shadow-lg p-4`}
+      className={`w-full ${poppins.className}  top-0 right-0 left-0   fixed z-20   text-black bg-black/90 backdrop-blur-sm flex justify-end shadow-lg p-4`}
     >
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500"></div>
       <div className="flex w-full text-white space-y-4   flex-col md:hidden items-end">
@@ -65,7 +61,7 @@ const Navbar = () => {
           />
         </div>
         <div
-          style={kranky.style}
+          style={poppins.style}
           className={`flex ${
             mobileNavOpen ? "h-100 transition-height" : "h-0"
           } flex-col space-y-5 w-full text-center transition-height duration-300 overflow-hidden`}

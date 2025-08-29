@@ -52,8 +52,7 @@ const people = [
 ];
 
 import { motion } from "motion/react";
-import { ColourfulText } from "./ui/Colorful-text";
-import { Button, MovingBorder } from "./ui/Moving-border";
+
 const HeroSection = () => {
   return (
     <section

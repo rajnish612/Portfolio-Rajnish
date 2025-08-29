@@ -9,7 +9,7 @@ import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
   weight: "800",
-  subsets: ["latin"],
+  subsets: ["latin-ext"],
 });
 import { motion } from "motion/react";
 const Navbar = () => {

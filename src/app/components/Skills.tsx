@@ -35,7 +35,7 @@ const titanOne = Titan_One({
   subsets: ["latin-ext"],
 });
 const poppins = Poppins({
-  weight: "500",
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
   subsets: ["devanagari"],
 });
 
@@ -63,7 +63,7 @@ const Skills = () => {
         {skills.map((skill, idx) => {
           return (
             <motion.div
-            style={poppins.style}
+              style={poppins.style}
               initial={{ opacity: 0 }}
               transition={{ delay: 0.05 * idx }}
               whileInView={{ opacity: 1 }}

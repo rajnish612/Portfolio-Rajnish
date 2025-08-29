@@ -42,7 +42,7 @@ const titanOne = Titan_One({
   subsets: ["latin-ext"],
 });
 const poppins = Poppins({
-  weight: "500",
+  weight: ["100","200","300","400","500","600","700"],
   subsets: ["devanagari"],
 });
 import { motion } from "motion/react";

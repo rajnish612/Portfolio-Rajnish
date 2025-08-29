@@ -9,7 +9,7 @@ import { IoApps } from "react-icons/io5";
 import { TbBrandReactNative } from "react-icons/tb";
 import { Avatar } from "@heroui/react";
 import { Poppins, Titan_One } from "next/font/google";
-
+import { AnimatedTooltip } from "./ui/Animated-tooltip";
 const poppins = Poppins({
   weight: "500",
   subsets: ["latin"],
@@ -18,8 +18,42 @@ const poppins2 = Titan_One({
   weight: "400",
   subsets: ["latin-ext"],
 });
+const people = [
+  {
+    id: 1,
+    name: "React js",
+
+    image: "/images/atom.png",
+  },
+  {
+    id: 2,
+    name: "AI and Machine Learning",
+
+    image: "/images/ai.png",
+  },
+  {
+    id: 3,
+    name: "Web development",
+
+    image: "/images/internet.png",
+  },
+  {
+    id: 4,
+    name: "Deep Learning",
+
+    image: "/images/deep-learning.png",
+  },
+  {
+    id: 5,
+    name: "App development",
+
+    image: "/images/app-development.png",
+  },
+];
 
 import { motion } from "motion/react";
+import { ColourfulText } from "./ui/Colorful-text";
+import { Button, MovingBorder } from "./ui/Moving-border";
 const HeroSection = () => {
   return (
     <section
@@ -46,7 +80,7 @@ const HeroSection = () => {
               </span>
               <span
                 style={poppins2.style}
-                className="font-black  text-3xl text-[#415A77]"
+                className="font-black  text-3xl text-black"
               >
                 {"Rajnish Nath!".split("").map((item, idx) => {
                   return (
@@ -82,7 +116,7 @@ const HeroSection = () => {
                   })}
               </span>
             </div>
-            <div className="flex gap-4 mt-5 flex-wrap items-center">
+            {/* <div className="flex gap-4 mt-5 flex-wrap items-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -129,6 +163,10 @@ const HeroSection = () => {
               >
                 <Avatar size="lg" isBordered color="danger" icon={<IoApps />} />
               </motion.div>
+            </div> */}
+
+            <div className="flex mt-15 flex-row items-center  justify-center mb-10 w-full">
+              <AnimatedTooltip items={people} />
             </div>
           </div>
           <div className="flex space-y-4 flex-col items-center">
@@ -140,9 +178,9 @@ const HeroSection = () => {
             >
               <h1
                 style={poppins.style}
-                className="font-black text-2xl sm:text-3xl md:text-4xl bg-clip-text w-fit bg-gradient-to-r from-black  via-black/50 to-blue-500 text-transparent "
+                className="font-black text-2xl sm:text-3xl md:text-4xl bg-clip-text w-fit bg-gradient-to-r from-black  via-black/50  to-indigo-500 text-transparent "
               >
-                {`Software Developer`}
+                Software Developer
               </h1>
               <Avatar
                 isBordered
@@ -189,7 +227,7 @@ const HeroSection = () => {
                     .getElementById("contact")
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="bg-[#0D1B2A] shadow-lg cursor-pointer hover:scale-[1.1] transition-transform shadow-indigo-400 p-2 rounded-lg text-[#E0E1DD]"
+                className="bg-[#0D1B2A] rounded-full shadow-lg cursor-pointer hover:scale-[1.1] transition-transform shadow-indigo-400 p-3  text-[#E0E1DD]"
               >
                 Get in touch
               </button>
@@ -200,7 +238,7 @@ const HeroSection = () => {
                     .getElementById("projects")
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="bg-[#415A77] cursor-pointer hover:scale-[1.1] transition-transform shadow-lg shadow-indigo-400 p-2 rounded-lg text-[#E0E1DD]"
+                className="bg-[#415A77]  rounded-full cursor-pointer hover:scale-[1.1] transition-transform shadow-lg shadow-indigo-400 p-3 text-[#E0E1DD]"
               >
                 Browse Projects
               </button>

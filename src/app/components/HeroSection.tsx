@@ -2,11 +2,7 @@
 import React from "react";
 import Image from "next/image";
 
-import { CgWebsite } from "react-icons/cg";
-import { FaReact } from "react-icons/fa6";
 import { FaCode } from "react-icons/fa";
-import { IoApps } from "react-icons/io5";
-import { TbBrandReactNative } from "react-icons/tb";
 import { Avatar } from "@heroui/react";
 import { Poppins, Titan_One } from "next/font/google";
 import { AnimatedTooltip } from "./ui/Animated-tooltip";
@@ -173,45 +169,50 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               transition={{ duration: 2 }}
               whileInView={{ opacity: 1 }}
-              className="flex bg-gradient-to-r px-5 from-indigo-50 to-pink-100/50 rounded-full shadow-lg shadow-indigo-200 p-2 items-center space-x-3"
+              className="relative group"
             >
-              <h1
-                style={poppins.style}
-                className="font-black text-2xl sm:text-3xl md:text-4xl bg-clip-text w-fit bg-gradient-to-r from-black  via-black/50  to-indigo-500 text-transparent "
-              >
-                Software Developer
-              </h1>
-              <Avatar
-                isBordered
-                size="sm"
-                className="w-7 h-7"
-                icon={<FaCode size={17} />}
-                color="primary"
-              />{" "}
-              <span
-                style={poppins.style}
-                className="text-2xl sm:text-3xl md:text-4xl bg-clip-text w-fit bg-gradient-to-r from-indigo-500 to-red-500 text-transparent"
-              >
-                {" "}
-                {""}
-              </span>
+              <div className="relative flex bg-gradient-to-r px-6 py-3 from-white via-blue-50 to-purple-50 rounded-full shadow-xl border border-white/50 backdrop-blur-sm items-center space-x-4">
+                <div className="relative">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-sm opacity-50"></div>
+                  <Avatar
+                    isBordered
+                    size="md"
+                    className="w-10 h-10 relative bg-gradient-to-r from-blue-500 to-purple-500"
+                    icon={<FaCode size={20} className="text-white" />}
+                    color="primary"
+                  />
+                </div>
+
+                <h1
+                  style={poppins.style}
+                  className="font-black text-2xl sm:text-3xl md:text-4xl bg-clip-text bg-gradient-to-r from-gray-900 via-blue-800 to-purple-700 text-transparent drop-shadow-sm"
+                >
+                  Software Developer
+                </h1>
+              </div>
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              transition={{ duration: 2 }}
-              whileInView={{ opacity: 1 }}
-              className="h-90 w-90 sm:h-100 sm:w-100 shadow-blue-300 border-3 border-slate-400 bg-amber-200  shadow-2xl rounded-full  overflow-hidden"
-            >
-              <Image
-                className="ring-2 ring-[#0D1B2A] w-full h-full"
-                src="/images/image.jpeg"
-                alt="Rajnish"
-                // width={200}
-                width={400}
-                height={400}
-                style={{ objectFit: "cover" }}
-              />
-            </motion.div>
+            <div className="relative group mt-3 cursor-pointer">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+
+              <div className="absolute -inset-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full"></div>
+
+              <div className="relative h-80 w-80 sm:h-96 sm:w-96 rounded-full overflow-hidden border-4 border-white shadow-2xl group-hover:shadow-blue-500/25 transition-all duration-500 group-hover:scale-105">
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 via-transparent to-purple-500/20 z-10"></div>
+
+                <Image
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="/images/image.jpeg"
+                  alt="Rajnish Nath"
+                  width={400}
+                  height={400}
+                  priority
+                />
+              </div>
+
+              {/* Bottom accent */}
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+            </div>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               transition={{ duration: 1, delay: 0.4 }}

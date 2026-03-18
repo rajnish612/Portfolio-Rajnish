@@ -6,14 +6,17 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Education from "./components/Education";
 import Certifications from "./components/Certifications";
+import AIMLSection from "./components/AIMLSection";
+import ToolsFrameworks from "./components/ToolsFrameworks";
 
 const page = () => {
   return (
-    // bg-gradient-to-br from-[#778DA9] to-[#E0E1DD]
-    <div className="  flex flex-col  bg-white">
+    <div className="flex flex-col bg-white">
       <Navbar />
 
       <HeroSection />
+      <ToolsFrameworks />
+      <AIMLSection />
       <Skills />
       <Projects />
       <Education />

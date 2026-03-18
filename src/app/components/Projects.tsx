@@ -48,24 +48,24 @@ const poppins = Poppins({
 import { motion } from "motion/react";
 const Projects = () => {
   return (
-    <div id="projects" className="flex flex-col mt-20 px-4 bg-gradient-to-b from-gray-50 to-white py-16">
+    <div id="projects" className="flex flex-col mt-20 px-4 bg-white py-16">
       {/* Section Header */}
       <div className="mx-auto w-full max-w-6xl mb-16">
         <div className="text-center mb-8">
           <h1
             style={titanOne.style}
-            className="text-5xl md:text-6xl font-black bg-clip-text bg-gradient-to-r from-gray-900 via-blue-800 to-purple-700 text-transparent mb-4"
+            className="text-5xl md:text-6xl font-black text-gray-900 mb-4"
           >
             Featured Projects
           </h1>
           <p style={poppins.style} className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Explore my latest work showcasing full-stack development, modern UI/UX design, and cutting-edge technologies
+            Explore my latest work showcasing full-stack development and modern technologies
           </p>
         </div>
         <div className="flex items-center justify-center space-x-4">
-          <div className="h-0.5 w-24 bg-gradient-to-r from-transparent to-blue-500" />
-          <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
-          <div className="h-0.5 w-24 bg-gradient-to-r from-purple-500 to-transparent" />
+          <div className="h-1 w-24 bg-blue-600 rounded-full" />
+          <div className="w-3 h-3 bg-blue-600 rounded-full" />
+          <div className="h-1 w-24 bg-blue-600 rounded-full" />
         </div>
       </div>
 
@@ -82,51 +82,48 @@ const Projects = () => {
               className="relative group"
             >
               
-              <div className="relative bg-gradient-to-r from-indigo-50 via-white to-purple-50 border-2 border-slate-200 shadow-[0px_0px_60px_5px] shadow-blue-100 rounded-2xl p-8 backdrop-blur-sm">
+              <div className="relative bg-white border-2 border-gray-200 shadow-md rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
                 <div className={`flex ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} flex-col gap-8 lg:gap-12 items-center`}>
                   <div className="flex-1 max-w-lg">
                     <div className="relative group">
-                      <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-                      
-                      <Card className="relative bg-gradient-to-br from-gray-900 to-gray-800 border-0 shadow-2xl overflow-hidden">
-                        <CardHeader className="pb-2 pt-4 px-6 flex flex-row items-center justify-between">
+                      <Card className="relative bg-gray-100 border-2 border-gray-200 shadow-md overflow-hidden">
+                        <CardHeader className="pb-2 pt-4 px-6 flex flex-row items-center justify-between bg-white border-b border-gray-200">
                           <h4
                             style={titanOne.style}
-                            className="font-bold text-white text-xl"
+                            className="font-bold text-gray-900 text-xl"
                           >
                             {project.title}
                           </h4>
                           <div className="flex space-x-3">
                             <a 
                               href={project.github} 
-                              className="p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors cursor-pointer group"
+                              className="p-2 bg-gray-200 hover:bg-gray-300 rounded-lg transition-colors cursor-pointer"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              <FaGithub className="text-white group-hover:scale-110 transition-transform" size={18} />
+                              <FaGithub className="text-gray-900" size={18} />
                             </a>
                             {project.live && (
                               <a 
                                 href={project.live} 
-                                className="p-2 bg-blue-500 hover:bg-blue-600 rounded-full transition-colors cursor-pointer group"
+                                className="p-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors cursor-pointer"
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                <FiExternalLink className="text-white group-hover:scale-110 transition-transform" size={18} />
+                                <FiExternalLink className="text-white" size={18} />
                               </a>
                             )}
                           </div>
                         </CardHeader>
                         <CardBody className="px-6 pb-6">
-                          <div className="relative overflow-hidden rounded-xl">
+                          <div className="relative overflow-hidden rounded-lg">
                             <Image
                               alt={`${project.title} preview`}
-                              className="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-500"
+                              className="object-cover w-full h-64"
                               src={project.image}
                               width={400}
                               height={250}
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                           </div>
                         </CardBody>
                       </Card>
@@ -136,7 +133,7 @@ const Projects = () => {
                   <div className="flex-1 space-y-6">
                     <div className="space-y-4">
                       <div className="flex items-center space-x-3">
-                        <div className="w-1 h-8 bg-gradient-to-b from-blue-500 to-purple-500 rounded-full" />
+                        <div className="w-1 h-8 bg-blue-600 rounded-full" />
                         <h2
                           style={titanOne.style}
                           className="text-3xl lg:text-4xl font-black text-gray-900"
@@ -158,9 +155,9 @@ const Projects = () => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-full transition-colors font-medium group"
+                        className="flex items-center space-x-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg transition-colors font-medium"
                       >
-                        <FaGithub className="group-hover:scale-110 transition-transform" size={18} />
+                        <FaGithub size={18} />
                         <span>View Code</span>
                       </a>
                       {project.live && (
@@ -168,9 +165,9 @@ const Projects = () => {
                           href={project.live}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white px-6 py-3 rounded-full transition-all font-medium group"
+                          className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
                         >
-                          <FiExternalLink className="group-hover:scale-110 transition-transform" size={18} />
+                          <FiExternalLink size={18} />
                           <span>Live Demo</span>
                         </a>
                       )}

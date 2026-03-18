@@ -112,21 +112,15 @@ const AIMLSection = () => {
                 className="group"
               >
                 <div className="relative h-full">
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-r ${category.color} rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300`}
-                  />
-
-                  <div className="relative bg-white border-2 border-gray-100 rounded-2xl p-8 h-full shadow-lg hover:shadow-2xl transition-all duration-300 hover:border-gray-200">
+                  <div className="relative bg-white border-2 border-gray-200 rounded-2xl p-8 h-full shadow-md hover:shadow-lg hover:border-blue-600 transition-all duration-300">
                     {/* Icon and Title */}
                     <div className="flex items-center gap-4 mb-6">
-                      <div
-                        className={`p-4 rounded-xl bg-gradient-to-br ${category.color} text-white`}
-                      >
+                      <div className="p-4 rounded-xl bg-blue-600 text-white">
                         <Icon className="w-8 h-8" />
                       </div>
                       <h3
                         style={titanOne.style}
-                        className="text-2xl font-bold text-gray-800"
+                        className="text-2xl font-bold text-gray-900"
                       >
                         {category.title}
                       </h3>

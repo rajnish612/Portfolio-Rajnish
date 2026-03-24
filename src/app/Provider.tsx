@@ -1,3 +1,5 @@
+"use client";
+
 // app/providers.tsx
 
 import { HeroUIProvider } from "@heroui/react";

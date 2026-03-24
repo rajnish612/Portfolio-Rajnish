@@ -85,7 +85,7 @@ const HeroSection = () => {
 
                 <Image
                   className="w-full h-full object-cover"
-                  src="/images/image.jpeg"
+                  src="/images/image.png"
                   alt="Rajnish Nath"
                   width={400}
                   height={400}

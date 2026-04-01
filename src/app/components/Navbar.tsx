@@ -4,6 +4,7 @@ import { AiFillLinkedin } from "react-icons/ai";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
+import { FaXmark } from "react-icons/fa6";
 
 import { Poppins } from "next/font/google";
 
@@ -12,257 +13,104 @@ const poppins = Poppins({
   subsets: ["latin-ext"],
 });
 import { motion } from "motion/react";
+
 const Navbar = () => {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+  const navLinks = [
+    { label: "Skills", id: "skills" },
+    { label: "Projects", id: "projects" },
+    { label: "Education", id: "education" },
+    { label: "Tools", id: "tools" },
+    { label: "AI/ML", id: "aiml" },
+    { label: "Contact", id: "contact" },
+  ];
+
+  const scrollTo = (id: string) => {
+    setMobileNavOpen(false);
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <motion.nav
-      initial={{ opacity: 0 }}
-      transition={{ duration: 1 }}
+      initial={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.7 }}
       animate={{ opacity: 1 }}
-      className={`w-full ${poppins.className} top-0 right-0 left-0 fixed z-20 text-gray-900 bg-white border-b border-gray-200 flex justify-end shadow-sm p-4`}
+      className={`w-full ${poppins.className} top-0 right-0 left-0 fixed z-30 px-4 pt-4`}
     >
-      <div className="flex w-full text-gray-900 space-y-4 flex-col md:hidden items-end">
-        <div className="flex flex-wrap justify-between w-full items-end h-10 mt-auto">
-          <ul className="flex space-x-6">
-            <a href="https://www.linkedin.com/in/rajnish-nath-45452b346/">
-              <AiFillLinkedin
-                color="#1f2937"
-                className="cursor-pointer hover:text-blue-600 transition-colors"
-                size={24}
-              />
-            </a>
-            <a href="https://github.com/rajnish612">
-              <FaGithub
-                color="#1f2937"
-                className="cursor-pointer hover:text-blue-600 transition-colors"
-                size={24}
-              />
-            </a>
-
-            <a href="https://www.instagram.com/_raj__nish__?igsh=ZjE0aWtjd2d5bXc3">
-              <FaInstagram
-                color="#1f2937"
-                className="cursor-pointer hover:text-blue-600 transition-colors"
-                size={24}
-              />
-            </a>
-          </ul>
-          <FaBars
-            onClick={() => setMobileNavOpen(!mobileNavOpen)}
-            size={28}
-            color="#1f2937"
-            className="transition-all"
-          />
-        </div>
-        <div
-          style={poppins.style}
-          className={`flex ${
-            mobileNavOpen ? "h-100 transition-height" : "h-0"
-          } flex-col space-y-3 w-full text-center transition-height duration-300 overflow-hidden`}
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between rounded-2xl border border-white/15 bg-slate-950/70 px-4 py-3 shadow-2xl backdrop-blur-xl">
+        <button
+          onClick={() => scrollTo("home")}
+          className="font-display text-left text-sm font-semibold tracking-[0.24em] text-teal-300"
         >
-          <button
-            onClick={() => {
-              setMobileNavOpen(false);
-              document
-                .getElementById("home")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="text-gray-700 hover:text-blue-600 transition-colors py-2"
+          RAJNISH NATH
+        </button>
+
+        <ul className="hidden items-center gap-6 md:flex">
+          {navLinks.map((link) => (
+            <li key={link.id}>
+              <button
+                onClick={() => scrollTo(link.id)}
+                className="text-sm text-slate-200 transition-colors hover:text-teal-300"
+              >
+                {link.label}
+              </button>
+            </li>
+          ))}
+        </ul>
+
+        <div className="hidden items-center gap-3 md:flex">
+          <a
+            href="https://www.linkedin.com/in/rajnish-nath-45452b346/"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-lg border border-white/20 p-2 text-slate-100 transition-colors hover:border-teal-300 hover:text-teal-300"
           >
-            Home
-          </button>
-          <button
-            onClick={() => {
-              setMobileNavOpen(false);
-              document
-                .getElementById("skills")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="text-gray-700 hover:text-blue-600 transition-colors py-2"
+            <AiFillLinkedin size={19} />
+          </a>
+          <a
+            href="https://github.com/rajnish612"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-lg border border-white/20 p-2 text-slate-100 transition-colors hover:border-teal-300 hover:text-teal-300"
           >
-            Skills
-          </button>
-          <button
-            onClick={() => {
-              setMobileNavOpen(false);
-              document
-                .getElementById("projects")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="text-gray-700 hover:text-blue-600 transition-colors py-2"
+            <FaGithub size={19} />
+          </a>
+          <a
+            href="https://www.instagram.com/_raj__nish__?igsh=ZjE0aWtjd2d5bXc3"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-lg border border-white/20 p-2 text-slate-100 transition-colors hover:border-teal-300 hover:text-teal-300"
           >
-            Projects
-          </button>
-          <button
-            onClick={() => {
-              setMobileNavOpen(false);
-              document
-                .getElementById("education")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="text-gray-700 hover:text-blue-600 transition-colors py-2"
-          >
-            Education
-          </button>
-          <button
-            onClick={() => {
-              setMobileNavOpen(false);
-              document
-                .getElementById("certifications")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="text-gray-700 hover:text-blue-600 transition-colors py-2"
-          >
-            Certifications
-          </button>
-          <button
-            onClick={() => {
-              setMobileNavOpen(false);
-              document
-                .getElementById("tools")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="text-gray-700 hover:text-blue-600 transition-colors py-2"
-          >
-            Tools
-          </button>
-          <button
-            onClick={() => {
-              setMobileNavOpen(false);
-              document
-                .getElementById("aiml")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="text-gray-700 hover:text-blue-600 transition-colors py-2"
-          >
-            AI/ML
-          </button>
-          <button
-            onClick={() => {
-              setMobileNavOpen(false);
-              document
-                .getElementById("contact")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="text-gray-700 hover:text-blue-600 transition-colors py-2"
-          >
-            Contact
-          </button>
+            <FaInstagram size={19} />
+          </a>
+        </div>
+
+        <button
+          onClick={() => setMobileNavOpen((prev) => !prev)}
+          className="md:hidden rounded-lg border border-white/20 p-2 text-slate-100"
+        >
+          {mobileNavOpen ? <FaXmark size={18} /> : <FaBars size={18} />}
+        </button>
+      </div>
+
+      <div
+        className={`mx-auto mt-2 max-w-7xl overflow-hidden rounded-2xl border border-white/15 bg-slate-950/85 backdrop-blur-xl transition-all duration-300 md:hidden ${
+          mobileNavOpen ? "max-h-[420px] p-4" : "max-h-0 p-0 border-transparent"
+        }`}
+      >
+        <div className="flex flex-col gap-2">
+          {navLinks.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => scrollTo(link.id)}
+              className="rounded-xl px-3 py-2 text-left text-slate-200 transition-colors hover:bg-white/10 hover:text-teal-300"
+            >
+              {link.label}
+            </button>
+          ))}
         </div>
       </div>
-      <ul className="hidden py-4 font-light md:flex w-fit items-center space-x-8">
-        <li>
-          <button
-            onClick={() => {
-              setMobileNavOpen(false);
-              document
-                .getElementById("skills")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="text-gray-700 cursor-pointer bg-transparent group flex flex-col justify-end hover:text-blue-600 transition-colors"
-          >
-            Skills
-            <div className="h-0.5 w-0 bg-blue-600 group-hover:w-full rounded-full transition-all mr-auto" />
-          </button>
-        </li>
-        <li>
-          <button
-            onClick={() => {
-              setMobileNavOpen(false);
-              document
-                .getElementById("projects")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="text-gray-700 cursor-pointer bg-transparent group flex flex-col justify-end hover:text-blue-600 transition-colors"
-          >
-            Projects
-            <div className="h-0.5 w-0 bg-blue-600 group-hover:w-full rounded-full transition-all mr-auto" />
-          </button>
-        </li>
-        <li>
-          <button
-            onClick={() => {
-              setMobileNavOpen(false);
-              document
-                .getElementById("education")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="text-gray-700 cursor-pointer bg-transparent group flex flex-col justify-end hover:text-blue-600 transition-colors"
-          >
-            Education
-            <div className="h-0.5 w-0 bg-blue-600 group-hover:w-full rounded-full transition-all mr-auto" />
-          </button>
-        </li>
-        <li>
-          <button
-            onClick={() => {
-              setMobileNavOpen(false);
-              document
-                .getElementById("tools")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="text-gray-700 cursor-pointer bg-transparent group flex flex-col justify-end hover:text-blue-600 transition-colors"
-          >
-            Tools
-            <div className="h-0.5 w-0 bg-blue-600 group-hover:w-full rounded-full transition-all mr-auto" />
-          </button>
-        </li>
-        <li>
-          <button
-            onClick={() => {
-              setMobileNavOpen(false);
-              document
-                .getElementById("aiml")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="text-gray-700 cursor-pointer bg-transparent group flex flex-col justify-end hover:text-blue-600 transition-colors"
-          >
-            AI/ML
-            <div className="h-0.5 w-0 bg-blue-600 group-hover:w-full rounded-full transition-all mr-auto" />
-          </button>
-        </li>
-        <li>
-          <button
-            onClick={() => {
-              setMobileNavOpen(false);
-              document
-                .getElementById("contact")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="text-gray-700 cursor-pointer bg-transparent group flex flex-col justify-end hover:text-blue-600 transition-colors"
-          >
-            Contact
-            <div className="h-0.5 w-0 bg-blue-600 group-hover:w-full rounded-full transition-all mr-auto" />
-          </button>
-        </li>
-        <li className="border-l border-gray-300 pl-8">
-          <a href="https://www.linkedin.com/in/rajnish-nath-45452b346/">
-            <AiFillLinkedin
-              color="#1f2937"
-              className="cursor-pointer hover:text-blue-600 transition-colors"
-              size={24}
-            />
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/rajnish612">
-            <FaGithub
-              color="#1f2937"
-              className="cursor-pointer hover:text-blue-600 transition-colors"
-              size={24}
-            />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/_raj__nish__?igsh=ZjE0aWtjd2d5bXc3">
-            <FaInstagram
-              color="#1f2937"
-              className="cursor-pointer hover:text-blue-600 transition-colors"
-              size={24}
-            />
-          </a>
-        </li>
-      </ul>
     </motion.nav>
   );
 };

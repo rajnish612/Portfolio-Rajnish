@@ -65,7 +65,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="min-h-screen py-20 px-4 bg-white"
+      className="section-shell min-h-screen py-20 px-4"
     >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -75,15 +75,15 @@ const Contact = () => {
       >
         <h1
           style={kranky.style}
-          className="text-5xl md:text-6xl font-black text-gray-900 mb-6"
+          className="font-display text-5xl md:text-6xl font-black text-white mb-6"
         >
           Get In Touch
         </h1>
 
-        <div className="p-8 bg-gray-50 border-2 border-gray-200 rounded-2xl shadow-md">
+        <div className="glass-card mx-auto max-w-4xl rounded-2xl p-8">
           <span
             style={poppins.style}
-            className="font-medium text-gray-700 text-lg"
+            className="font-medium text-slate-300 text-lg"
           >
             I’m always open to new opportunities, collaborations, and meaningful
             conversations. Whether you have a project in mind, want to discuss
@@ -94,7 +94,7 @@ const Contact = () => {
       </motion.div>
 
       <Form
-        className="w-full max-w-lg space-y-4 mx-auto flex bg-white border-2 border-gray-200 shadow-md p-8 rounded-2xl flex-col gap-4"
+        className="glass-card w-full max-w-lg space-y-4 mx-auto flex p-8 rounded-2xl flex-col gap-4"
         onSubmit={(e) => {
           e.preventDefault();
           const data = Object.fromEntries(new FormData(e.currentTarget));
@@ -112,7 +112,7 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           className="flex space-y-2 flex-col w-full"
         >
-          <span style={poppins.style} className="text-black">
+          <span style={poppins.style} className="text-slate-100">
             Your name
           </span>
           <Input
@@ -121,6 +121,11 @@ const Contact = () => {
             name="name"
             placeholder="Write your name"
             type="text"
+            classNames={{
+              input: "text-slate-100 placeholder:text-slate-400",
+              inputWrapper:
+                "bg-slate-900/70 border border-white/15 group-data-[focus=true]:border-teal-300",
+            }}
           />
         </motion.div>
         <motion.div
@@ -129,7 +134,7 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           className="flex space-y-2 flex-col w-full"
         >
-          <span style={poppins.style} className="text-black">
+          <span style={poppins.style} className="text-slate-100">
             Message
           </span>
           <Input
@@ -138,6 +143,11 @@ const Contact = () => {
             name="message"
             placeholder="Write a message"
             type="text"
+            classNames={{
+              input: "text-slate-100 placeholder:text-slate-400",
+              inputWrapper:
+                "bg-slate-900/70 border border-white/15 group-data-[focus=true]:border-teal-300",
+            }}
           />
         </motion.div>
         <motion.div
@@ -146,7 +156,7 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           className="flex space-y-2 flex-col w-full"
         >
-          <span style={poppins.style} className="text-black">
+          <span style={poppins.style} className="text-slate-100">
             Email
           </span>
           <Input
@@ -155,6 +165,11 @@ const Contact = () => {
             name="email"
             placeholder="Enter your email"
             type="email"
+            classNames={{
+              input: "text-slate-100 placeholder:text-slate-400",
+              inputWrapper:
+                "bg-slate-900/70 border border-white/15 group-data-[focus=true]:border-teal-300",
+            }}
           />
         </motion.div>
         <motion.div
@@ -165,14 +180,14 @@ const Contact = () => {
         >
           <Button
             style={kranky.style}
-            className="bg-blue-600 text-white hover:bg-blue-700"
+            className="btn-primary-modern"
             type="submit"
           >
             Submit
           </Button>
           <Button
             style={kranky.style}
-            className="bg-gray-200 text-gray-900 hover:bg-gray-300"
+            className="btn-secondary-modern"
             type="reset"
             variant="flat"
           >

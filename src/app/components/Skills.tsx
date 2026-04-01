@@ -86,7 +86,7 @@ const Skills = () => {
     <div
       id="skills"
       style={poppins.style}
-      className="px-5 overflow-x-hidden mt-10 py-16 w-full flex-col flex bg-white"
+      className="section-shell px-5 overflow-x-hidden mt-10 py-16 w-full flex-col flex"
     >
       {/* Header */}
       <motion.div
@@ -96,18 +96,18 @@ const Skills = () => {
         className="mx-auto w-full max-w-6xl mb-16"
       >
         <div className="flex items-center px-5 space-x-5 mb-8">
-          <div className="h-[2px] w-full bg-blue-600" />
+          <div className="accent-gradient h-[2px] w-full" />
           <h1
             style={titanOne.style}
-            className="text-gray-900 text-center text-5xl md:text-6xl whitespace-nowrap"
+            className="font-display readable-title text-center text-5xl md:text-6xl whitespace-nowrap"
           >
             Skills
           </h1>
-          <div className="h-[2px] w-full bg-blue-600" />
+          <div className="accent-gradient h-[2px] w-full" />
         </div>
         <p
           style={poppins.style}
-          className="text-center text-gray-700 text-lg max-w-2xl mx-auto"
+          className="readable-body text-center text-lg max-w-2xl mx-auto"
         >
           Comprehensive skills across full-stack development and modern
           technologies
@@ -126,11 +126,11 @@ const Skills = () => {
               className="group"
             >
               <div className="relative h-full">
-                <div className="relative bg-white border-2 border-gray-200 rounded-2xl p-6 h-full hover:border-blue-600 shadow-md hover:shadow-lg transition-all duration-300">
+                <div className="glass-card relative rounded-2xl p-6 h-full transition-all duration-300 hover:-translate-y-1">
                   {/* Category Title */}
                   <h3
                     style={titanOne.style}
-                    className="text-2xl font-bold text-gray-900 mb-5"
+                    className="text-2xl font-bold text-white mb-5"
                   >
                     {skillGroup.category}
                   </h3>
@@ -148,10 +148,10 @@ const Skills = () => {
                             duration: 0.3,
                             delay: groupIdx * 0.1 + skillIdx * 0.05,
                           }}
-                          className="flex items-center gap-3 p-3 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all duration-200 group/skill"
+                          className="flex items-center gap-3 p-3 rounded-lg bg-slate-900/60 hover:bg-slate-800/70 transition-all duration-200 group/skill"
                         >
-                          <IconComponent className="w-5 h-5 text-gray-700 flex-shrink-0" />
-                          <span className="text-sm font-medium text-gray-700">
+                          <IconComponent className="w-5 h-5 text-teal-300 flex-shrink-0" />
+                          <span className="text-sm font-medium text-slate-100">
                             {skill.name}
                           </span>
                         </motion.div>

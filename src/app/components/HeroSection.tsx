@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 
-import { Avatar } from "@heroui/react";
 import { Poppins, Titan_One } from "next/font/google";
 const poppins = Poppins({
   weight: "500",
@@ -14,118 +13,115 @@ const poppins2 = Titan_One({
 });
 
 import { motion } from "motion/react";
-
 const HeroSection = () => {
   return (
     <section
       id="home"
-      className="   flex justify-center py-5 items-center h-full overflow-x-hidden  text-black  "
+      className="relative flex min-h-screen items-center justify-center overflow-x-hidden px-4 pb-16 pt-28"
     >
-      <div className="flex mt-30  justify-center  w-full  items-center ">
-        <div className=" flex  flex-wrap   w-full   gap-20 justify-center   ">
-          <div className=" max-w-4xl  px-3 lg:max-w-xl  flex flex-col items-center">
-            <div className=" flex flex-col space-y-4  text-left   ">
-              <span style={poppins2.style} className="font-black  text-3xl">
-                {"Hi, I’m".split("").map((item, idx) => {
-                  return (
-                    <motion.span
-                      key={item}
-                      transition={{ delay: idx * 0.1, duration: 0.1 }}
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                    >
-                      {item}
-                    </motion.span>
-                  );
-                })}{" "}
-              </span>
-              <span
-                style={poppins2.style}
-                className="font-black  text-3xl text-black"
-              >
-                {"Rajnish Nath!".split("").map((item, idx) => {
-                  return (
-                    <motion.span
-                      key={idx}
-                      transition={{ delay: idx * 0.1, duration: 0.1 }}
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                    >
-                      {item}
-                    </motion.span>
-                  );
-                })}
-              </span>
+      <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-center gap-10 lg:flex-nowrap lg:justify-between">
+        <div className="w-full max-w-3xl">
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-5 font-display text-2xl leading-tight text-white sm:text-3xl lg:text-4xl"
+          >
+            FULL-STACK DEVELOPER | AI, ML, DL & COMPUTER VISION
+          </motion.p>
 
-              <span
-                style={poppins.style}
-                className="text-[#1B263B]  font-light"
-              >
-                {"Full-stack developer 🚀 | AI/ML & Deep Learning Enthusiast 🤖 | Computer Vision Explorer 👁️ | I'm a passionate developer with expertise in React.js, React Native, Next.js, Node.js, TypeScript, Java, C, Python, and PostgreSQL. I'm actively learning Machine Learning, Deep Learning, and Computer Vision to build intelligent applications. I enjoy solving complex problems and creating modern, responsive solutions. My goal is to grow as a developer and contribute to impactful AI-driven projects."
-                  .split("")
-                  .map((item, idx) => {
-                    return (
-                      <motion.span
-                        key={idx}
-                        transition={{ delay: idx * 0.005, duration: 0.1 }}
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                      >
-                        {item}
-                      </motion.span>
-                    );
-                  })}
-              </span>
-            </div>
-          </div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.25 }}
+            style={poppins.style}
+            className="text-muted mt-7 max-w-2xl text-base leading-8 sm:text-lg"
+          >
+            I build scalable full-stack products using Next.js, Node.js,
+            TypeScript, Python, and PostgreSQL. Alongside web engineering, I am
+            deeply focused on Artificial Intelligence, Machine Learning, Deep
+            Learning, and Computer Vision to develop practical, data-driven,
+            real-world applications.
+          </motion.p>
 
-          <div className="flex space-y-4 flex-col items-center">
-            <div className="relative group cursor-pointer mt-3">
-              <div className="relative h-80 w-80 sm:h-96 sm:w-96 rounded-full overflow-hidden border-4 border-gray-300 shadow-lg">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.35 }}
+            className="mt-8 flex flex-wrap gap-3"
+          >
+            {[
+              "AI + Machine Learning",
+              "Deep Learning",
+              "Computer Vision",
+            ].map(
+              (item) => (
+                <span
+                  key={item}
+                  className="glass-card rounded-full px-4 py-2 text-sm text-slate-200"
+                >
+                  {item}
+                </span>
+              )
+            )}
+          </motion.div>
 
-                <Image
-                  className="w-full h-full object-cover"
-                  src="/images/image.png"
-                  alt="Rajnish Nath"
-                  width={400}
-                  height={400}
-                  priority
-                />
-              </div>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              whileInView={{ opacity: 1, y: 0 }}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.8, delay: 0.45 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-10 flex flex-wrap items-center gap-4"
+          >
+            <button
               style={poppins.style}
-              className="flex gap-4 mt-5 flex-wrap items-center"
+              onClick={() => {
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="btn-primary-modern rounded-xl px-6 py-3 font-semibold transition-transform hover:-translate-y-0.5"
             >
-              <button
-                style={poppins.style}
-                onClick={() => {
-                  document
-                    .getElementById("contact")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-                className="bg-blue-600 rounded-lg cursor-pointer hover:bg-blue-700 transition-colors p-3 text-white font-medium"
-              >
-                Get in touch
-              </button>
-              <button
-                style={poppins.style}
-                onClick={() => {
-                  document
-                    .getElementById("projects")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-                className="bg-gray-700 rounded-lg cursor-pointer hover:bg-gray-800 transition-colors p-3 text-white font-medium"
-              >
-                Browse Projects
-              </button>
-            </motion.div>
-          </div>
+              Start a Conversation
+            </button>
+            <button
+              style={poppins.style}
+              onClick={() => {
+                document
+                  .getElementById("projects")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="btn-secondary-modern rounded-xl px-6 py-3 font-semibold transition-colors hover:border-white/35"
+            >
+              View Projects
+            </button>
+          </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, y: 24 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="glass-card relative w-full max-w-md rounded-[2rem] p-5"
+        >
+          <div className="absolute right-4 top-4 h-3 w-3 rounded-full bg-amber-300/90" />
+          <div className="overflow-hidden rounded-[1.5rem] border border-white/20">
+            <Image
+              className="h-[460px] w-full object-cover"
+              src="/images/image.png"
+              alt="Rajnish Nath"
+              width={480}
+              height={480}
+              priority
+            />
+          </div>
+
+          <div className="mt-4 flex items-center justify-between rounded-2xl border border-white/15 bg-slate-900/60 px-4 py-3">
+            <span className="text-xs uppercase tracking-[0.22em] text-teal-300">
+              Available For Work
+            </span>
+            <span className="text-sm text-slate-200">2026</span>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

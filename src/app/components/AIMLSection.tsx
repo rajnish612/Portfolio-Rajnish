@@ -68,7 +68,7 @@ const AIMLSection = () => {
   return (
     <div
       id="aiml"
-      className="min-h-screen py-20 px-4 bg-gradient-to-b from-white via-slate-50 to-white"
+      className="section-shell min-h-screen py-20 px-4"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -80,18 +80,18 @@ const AIMLSection = () => {
         >
           <h1
             style={titanOne.style}
-            className="text-5xl md:text-6xl font-black text-gray-900 mb-6"
+            className="font-display text-5xl md:text-6xl font-black text-white mb-6"
           >
             AI/ML & Computer Vision
           </h1>
           <div className="flex items-center justify-center gap-3 mb-8">
-            <div className="h-1 w-24 bg-blue-600 rounded-full" />
-            <div className="w-3 h-3 bg-blue-600 rounded-full" />
-            <div className="h-1 w-24 bg-blue-600 rounded-full" />
+            <div className="accent-gradient h-1 w-24 rounded-full" />
+            <div className="w-3 h-3 bg-teal-300 rounded-full" />
+            <div className="accent-gradient h-1 w-24 rounded-full" />
           </div>
           <p
             style={poppins.style}
-            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed"
           >
             Passionate about exploring Artificial Intelligence, Machine
             Learning, Deep Learning, and Computer Vision technologies. Currently
@@ -112,15 +112,15 @@ const AIMLSection = () => {
                 className="group"
               >
                 <div className="relative h-full">
-                  <div className="relative bg-white border-2 border-gray-200 rounded-2xl p-8 h-full shadow-md hover:shadow-lg hover:border-blue-600 transition-all duration-300">
+                  <div className="glass-card relative rounded-2xl p-8 h-full transition-all duration-300 hover:-translate-y-1">
                     {/* Icon and Title */}
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="p-4 rounded-xl bg-blue-600 text-white">
+                      <div className="p-4 rounded-xl bg-teal-400 text-slate-900">
                         <Icon className="w-8 h-8" />
                       </div>
                       <h3
                         style={titanOne.style}
-                        className="text-2xl font-bold text-gray-900"
+                        className="text-2xl font-bold text-white"
                       >
                         {category.title}
                       </h3>
@@ -129,7 +129,7 @@ const AIMLSection = () => {
                     {/* Description */}
                     <p
                       style={poppins.style}
-                      className="text-gray-600 text-sm mb-8 leading-relaxed"
+                      className="text-slate-300 text-sm mb-8 leading-relaxed"
                     >
                       {category.description}
                     </p>
@@ -146,12 +146,12 @@ const AIMLSection = () => {
                               duration: 0.3,
                               delay: idx * 0.15 + skillIdx * 0.08,
                             }}
-                            className={`flex items-center gap-3 p-2 rounded-lg bg-gray-50 hover:bg-gray-100 transition-all duration-200`}
+                            className={`flex items-center gap-3 p-2 rounded-lg bg-slate-900/60 hover:bg-slate-800/70 transition-all duration-200`}
                           >
-                            <span className="w-2 h-2 bg-blue-600 rounded-full" />
+                            <span className="w-2 h-2 bg-teal-300 rounded-full" />
                             <span
                               style={poppins.style}
-                              className={`font-medium text-sm text-gray-700`}
+                              className={`font-medium text-sm text-slate-100`}
                             >
                               {skill.name}
                             </span>

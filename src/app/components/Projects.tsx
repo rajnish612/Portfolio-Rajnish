@@ -48,24 +48,24 @@ const poppins = Poppins({
 import { motion } from "motion/react";
 const Projects = () => {
   return (
-    <div id="projects" className="flex flex-col mt-20 px-4 bg-white py-16">
+    <div id="projects" className="section-shell flex flex-col mt-20 px-4 py-16">
       {/* Section Header */}
       <div className="mx-auto w-full max-w-6xl mb-16">
         <div className="text-center mb-8">
           <h1
             style={titanOne.style}
-            className="text-5xl md:text-6xl font-black text-gray-900 mb-4"
+            className="font-display readable-title text-5xl md:text-6xl font-black mb-4"
           >
             Featured Projects
           </h1>
-          <p style={poppins.style} className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p style={poppins.style} className="readable-body text-lg max-w-2xl mx-auto">
             Explore my latest work showcasing full-stack development and modern technologies
           </p>
         </div>
         <div className="flex items-center justify-center space-x-4">
-          <div className="h-1 w-24 bg-blue-600 rounded-full" />
-          <div className="w-3 h-3 bg-blue-600 rounded-full" />
-          <div className="h-1 w-24 bg-blue-600 rounded-full" />
+          <div className="h-1 w-24 rounded-full accent-gradient" />
+          <div className="w-3 h-3 bg-teal-300 rounded-full" />
+          <div className="h-1 w-24 rounded-full accent-gradient" />
         </div>
       </div>
 
@@ -82,31 +82,31 @@ const Projects = () => {
               className="relative group"
             >
               
-              <div className="relative bg-white border-2 border-gray-200 shadow-md rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+              <div className="glass-card relative rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1">
                 <div className={`flex ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} flex-col gap-8 lg:gap-12 items-center`}>
                   <div className="flex-1 max-w-lg">
                     <div className="relative group">
-                      <Card className="relative bg-gray-100 border-2 border-gray-200 shadow-md overflow-hidden">
-                        <CardHeader className="pb-2 pt-4 px-6 flex flex-row items-center justify-between bg-white border-b border-gray-200">
+                      <Card className="relative bg-slate-900/70 border border-white/15 shadow-md overflow-hidden">
+                        <CardHeader className="pb-2 pt-4 px-6 flex flex-row items-center justify-between bg-slate-950/90 border-b border-white/10">
                           <h4
                             style={titanOne.style}
-                            className="font-bold text-gray-900 text-xl"
+                            className="font-bold text-white text-xl"
                           >
                             {project.title}
                           </h4>
                           <div className="flex space-x-3">
                             <a 
                               href={project.github} 
-                              className="p-2 bg-gray-200 hover:bg-gray-300 rounded-lg transition-colors cursor-pointer"
+                              className="p-2 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors cursor-pointer"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              <FaGithub className="text-gray-900" size={18} />
+                              <FaGithub className="text-white" size={18} />
                             </a>
                             {project.live && (
                               <a 
                                 href={project.live} 
-                                className="p-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors cursor-pointer"
+                                className="p-2 bg-teal-500 hover:bg-teal-400 rounded-lg transition-colors cursor-pointer"
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
@@ -115,7 +115,7 @@ const Projects = () => {
                             )}
                           </div>
                         </CardHeader>
-                        <CardBody className="px-6 pb-6">
+                        <CardBody className="px-6 pb-6 bg-slate-900/70">
                           <div className="relative overflow-hidden rounded-lg">
                             <Image
                               alt={`${project.title} preview`}
@@ -133,10 +133,10 @@ const Projects = () => {
                   <div className="flex-1 space-y-6">
                     <div className="space-y-4">
                       <div className="flex items-center space-x-3">
-                        <div className="w-1 h-8 bg-blue-600 rounded-full" />
+                        <div className="w-1 h-8 bg-teal-300 rounded-full" />
                         <h2
                           style={titanOne.style}
-                          className="text-3xl lg:text-4xl font-black text-gray-900"
+                          className="text-3xl lg:text-4xl font-black text-white"
                         >
                           {project.title}
                         </h2>
@@ -144,7 +144,7 @@ const Projects = () => {
                       
                       <p 
                         style={poppins.style} 
-                        className="text-gray-700 leading-relaxed text-lg"
+                        className="text-slate-300 leading-relaxed text-lg"
                       >
                         {project.description}
                       </p>
@@ -155,7 +155,7 @@ const Projects = () => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg transition-colors font-medium"
+                        className="flex items-center space-x-2 bg-slate-200 hover:bg-white text-slate-900 px-6 py-3 rounded-lg transition-colors font-medium"
                       >
                         <FaGithub size={18} />
                         <span>View Code</span>
@@ -165,7 +165,7 @@ const Projects = () => {
                           href={project.live}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
+                          className="flex items-center space-x-2 bg-teal-500 hover:bg-teal-400 text-slate-900 px-6 py-3 rounded-lg transition-colors font-medium"
                         >
                           <FiExternalLink size={18} />
                           <span>Live Demo</span>

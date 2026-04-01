@@ -11,7 +11,7 @@ import ToolsFrameworks from "./components/ToolsFrameworks";
 
 const page = () => {
   return (
-    <div className="flex flex-col bg-white">
+    <div className="flex flex-col bg-transparent text-foreground overflow-x-hidden">
       <Navbar />
 
       <HeroSection />

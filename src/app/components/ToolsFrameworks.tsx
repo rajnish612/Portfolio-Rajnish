@@ -80,7 +80,7 @@ const ToolsFrameworks = () => {
   ];
 
   return (
-    <div id="tools" className="min-h-screen py-20 px-4 bg-white">
+    <div id="tools" className="section-shell min-h-screen py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -91,7 +91,7 @@ const ToolsFrameworks = () => {
         >
           <h1
             style={titanOne.style}
-            className="text-5xl md:text-6xl font-black text-gray-900 mb-6"
+            className="font-display text-5xl md:text-6xl font-black text-white mb-6"
           >
             Tools & Technologies
           </h1>
@@ -102,7 +102,7 @@ const ToolsFrameworks = () => {
           </div>
           <p
             style={poppins.style}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-xl text-slate-300 max-w-3xl mx-auto"
           >
             My comprehensive tech stack for building modern, scalable
             applications
@@ -120,11 +120,11 @@ const ToolsFrameworks = () => {
             >
               <div className="relative group">
                 {/* Content */}
-                <div className="relative bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-blue-600 shadow-md hover:shadow-lg transition-all duration-300">
+                <div className="glass-card relative rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1">
                   {/* Category Header */}
                   <div className="mb-8">
                     <div
-                      className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-600 text-white mb-4`}
+                      className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-teal-400 text-slate-900 mb-4`}
                     >
                       <span
                         style={titanOne.style}
@@ -135,7 +135,7 @@ const ToolsFrameworks = () => {
                     </div>
                     <h3
                       style={titanOne.style}
-                      className="text-3xl font-bold text-gray-900"
+                      className="text-3xl font-bold text-white"
                     >
                       {toolGroup.category}
                     </h3>
@@ -155,16 +155,16 @@ const ToolsFrameworks = () => {
                             delay: groupIdx * 0.1 + toolIdx * 0.05,
                           }}
                           whileHover={{ scale: 1.05 }}
-                          className="flex flex-col items-center gap-3 p-4 rounded-lg hover:bg-gray-50 transition-all duration-200"
+                          className="flex flex-col items-center gap-3 p-4 rounded-lg hover:bg-white/5 transition-all duration-200"
                         >
                           <div className="relative">
-                            <div className="relative bg-white p-3 rounded-lg border border-gray-200 hover:border-blue-600 transition-colors hover:shadow-md">
-                              <Icon className="w-7 h-7 text-gray-700" />
+                            <div className="relative bg-slate-900/80 p-3 rounded-lg border border-white/15 hover:border-teal-300 transition-colors hover:shadow-md">
+                              <Icon className="w-7 h-7 text-slate-100" />
                             </div>
                           </div>
                           <span
                             style={poppins.style}
-                            className="text-sm font-medium text-gray-700 text-center"
+                            className="text-sm font-medium text-slate-100 text-center"
                           >
                             {tool.name}
                           </span>

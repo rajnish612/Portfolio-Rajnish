@@ -37,11 +37,12 @@ const HeroSection = () => {
             style={poppins.style}
             className="text-muted mt-7 max-w-2xl text-base leading-8 sm:text-lg"
           >
-            I build scalable full-stack products using Next.js, Node.js,
-            TypeScript, Python, and PostgreSQL. Alongside web engineering, I am
-            deeply focused on Artificial Intelligence, Machine Learning, Deep
-            Learning, and Computer Vision to develop practical, data-driven,
-            real-world applications.
+            I am deeply focused on Artificial Intelligence, Machine Learning,
+            Deep Learning, Neural Networks, and Computer Vision to create
+            intelligent systems that can think, learn, and make decisions on
+            their own. Alongside that, I build scalable full-stack apps using
+            Next.js, Node.js, TypeScript, Python, and PostgreSQL for practical,
+            data-driven, real-world applications.
           </motion.p>
 
           <motion.div
